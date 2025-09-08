@@ -4,12 +4,12 @@ const app = express();
 
 app.use(express.json());
 
-// Kết nối tới MongoDB
+// Connect to MongoDB
 const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/cham-soc-suc-khoe';
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Kết nối đến MongoDB thành công!'))
+  .then(() => console.log('Connected to MongoDB successfully!'))
   .catch(err => console.error(err));
 
 app.listen(3000, () => {
-  console.log('Server đang chạy trên http://localhost:3000');
+  console.log('Server is running on http://localhost:3000');
 });
