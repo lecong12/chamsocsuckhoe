@@ -5,7 +5,8 @@ const app = express();
 app.use(express.json());
 
 // Kết nối tới MongoDB
-mongoose.connect('mongodb://localhost:27017/cham-soc-suc-khoe', { useNewUrlParser: true, useUnifiedTopology: true })
+const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/cham-soc-suc-khoe';
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Kết nối đến MongoDB thành công!'))
   .catch(err => console.error(err));
 
