@@ -2,7 +2,7 @@
   "name": "cham-soc-suc-khoe-blockchain",
   "version": "1.0.0",
   "description": "Một ứng dụng chăm sóc sức khỏe dựa trên blockchain.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",    
     "build": "cross-env NODE_ENV=production webpack",
