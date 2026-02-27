@@ -6,7 +6,7 @@ Chào mừng bạn đến với dự án Chăm Sóc Sức Khỏe Blockchain!
 Dự án này nhằm mục đích phát triển một nền tảng quản lý hồ sơ sức khỏe cá nhân dựa trên công nghệ blockchain, giúp người dùng có thể:
 - Theo dõi hồ sơ sức khỏe của bản thân một cách dễ dàng.
 - Chia sẻ thông tin y tế với bác sĩ và cơ sở y tế một cách an toàn.
-- Bảo mật và bảo vệ quyền riêng tư của thông tin cá nhân.
+- Bảo mật và bảo vệ quyền riêng tư của thông tin cá nhân.mmm
 
 ## Tính Năng Nổi Bật
 - Lưu trữ hồ sơ sức khỏe trên blockchain với độ bảo mật cao.
