@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const path = require('path');
 const app = express();
 
 app.use(express.json());
@@ -11,9 +12,12 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB successfully!'))
   .catch(err => console.error(err));
 
-// Define a simple route
-app.get('/', (req, res) => {
-  res.send('Hello from Chăm Sóc Sức Khỏe Blockchain!');
+// Phục vụ các file tĩnh từ thư mục 'dist' (nơi Webpack build ra)
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// Chuyển hướng mọi request không khớp về index.html để React Router xử lý
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 const port = process.env.PORT || 3000;
