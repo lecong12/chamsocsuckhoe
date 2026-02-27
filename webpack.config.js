@@ -1,6 +1,7 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js', // Đường dẫn đến file index.js của React
@@ -34,6 +35,9 @@ module.exports = {
       'process.env': {
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
       }
+    }),
+    new HtmlWebpackPlugin({
+      template: './index.html'
     })
   ],
   mode: process.env.NODE_ENV || 'development', // Chế độ development hoặc production
